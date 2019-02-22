@@ -9,7 +9,7 @@ virtualenv:
 matrix:
   include:
     - python: 3.4
-      env: DISTRIB="ubuntu" TOX_PYTHON_VERSION="py34" COVERAGE="true"
+      env: DISTRIB="xenial" TOX_PYTHON_VERSION="py37" COVERAGE="true"
     - env: DISTRIB="conda" PYTHON_VERSION="3.6" COVERAGE="false"
 install:
   - source tests/travis_install.sh
@@ -18,9 +18,8 @@ install:
   # The automatic creation of a `requirements.txt` file is deprecated.
   # See `Dependency Management` in the docs for other options.
 before_script:
-  - git config --global user.email "you@example.com"
-  - git config --global user.name "Your Name"
-script:
+  - git config --global user.email "laurentiu.andronache@trailung.ro"
+  script:d
   - python setup.py test
   # ^  Change here if using tox
 after_success:
